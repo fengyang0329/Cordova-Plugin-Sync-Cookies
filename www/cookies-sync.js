@@ -7,8 +7,15 @@ function CookiesSync() { }
  * @param successCallback
  * @param errorCallback
  */
-CookiesSync.prototype.executeXHR = function (message, successCallback, errorCallback) {
-	cordova.exec(successCallback, errorCallback, "CookiesSync", "executeXHR", [message]);
+CookiesSync.prototype.executeXHR = function (url, successCallback, errorCallback) {
+
+	if ((url.substr(0,4)=="http")&&(url.indexOf("\/\/")>=0)) {
+			 url = url.slice(url.indexOf("\/\/")+2);
+		   };
+		   var sPos = url.indexOf("\/");
+		   var domain = url.substr(0,sPos);
+		   var path = url.substr(sPos,(url.length-sPos));
+cordova.exec(successCallback, errorCallback, "CookiesSync", "executeXHR", [url, domain, path]);
 };
 
 CookiesSync.install = function () {
