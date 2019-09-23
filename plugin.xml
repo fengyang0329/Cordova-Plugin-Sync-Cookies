@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-cookies-sync" version="1.0.1">
+<?xml version="1.0" encoding="UTF-8"?><plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-cookies-sync" version="1.0.2">
 	<!-- description -->
 	<name>Cookies Sync</name>
 	<description>Fix the cookies first time load problem.</description>
